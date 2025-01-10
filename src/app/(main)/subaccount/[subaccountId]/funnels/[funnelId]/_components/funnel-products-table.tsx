@@ -30,7 +30,7 @@ const FunnelProductsTable = ({ defaultData, products }: Props) => {
   const [liveProducts, setLiveProducts] = useState<
     { productId: string; recurring: boolean }[] | []
   >(JSON.parse(defaultData.liveProducts || "[]"));
-  console.log(defaultData);
+
   const handleSaveProducts = async () => {
     setIsLoading(true);
     const response = await updateFunnelProducts(

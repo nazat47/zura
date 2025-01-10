@@ -102,7 +102,6 @@ const PipelineView = ({
             });
           originalLane.Tickets = newOrderedTickets;
           setAllLanes(newLanes);
-          console.log(newOrderedTickets);
           updateTicketsOrder(newOrderedTickets);
           router.refresh();
         } else {

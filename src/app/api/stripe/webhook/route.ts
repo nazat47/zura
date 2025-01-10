@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
   const body = await req.text();
   const sig = headers().get("Stripe-Signature");
   const webhookSecret =
-    process.env.STRIPE_WEBHOOK_SECRET_LIVE ?? process.env.STRIPE_WEBHOOK_SECRET;
+    process.env.STRIPE_WEBHOOK_SECRET ?? process.env.STRIPE_WEBHOOK_SECRET;
 
   try {
     if (!sig || !webhookSecret) {

@@ -31,7 +31,7 @@ const PipelineInfobar = ({ subAccountId, pipelineId, pipelines }: Props) => {
   const { setOpen: setOpenModal, setClose } = useModal();
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(pipelineId);
-  console.log(pipelines);
+
   const handleClickCreatePipeline = () => {
     setOpenModal(
       <CustomModal
